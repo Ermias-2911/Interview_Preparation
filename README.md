@@ -7,6 +7,6 @@
 
 ## This document will prepare you well to become a software developer in short period of time. 
 It coveres OOP, java, algorithm, and data structure. The contents of this document are gathered 
-from diffrence most online visited sites. The quesions in this document are most asked quesion
+from different most online visited sites. The quesions in this document are most asked quesion
 by different Co in software development industry. Most solutions are from the same sites and some 
 are my own solutions. Enjoy it!  
