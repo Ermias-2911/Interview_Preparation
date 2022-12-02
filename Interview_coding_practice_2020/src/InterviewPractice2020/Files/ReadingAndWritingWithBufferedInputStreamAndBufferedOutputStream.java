@@ -21,6 +21,7 @@ public class ReadingAndWritingWithBufferedInputStreamAndBufferedOutputStream {
 // read the content from file
 		try (BufferedInputStream bufferedInputStream = new BufferedInputStream(new FileInputStream(absolutePath))) {
 			int ch = bufferedInputStream.read();
+			System.out.println("test: " + (char) ch);
 			while (ch != -1) {
 				System.out.print((char) ch);
 				ch = bufferedInputStream.read();

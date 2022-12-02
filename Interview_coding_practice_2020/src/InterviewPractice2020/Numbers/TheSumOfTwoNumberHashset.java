@@ -14,6 +14,7 @@ public class TheSumOfTwoNumberHashset {
 			// checking for condition
 			if (temp >= 0 && s.contains(temp)) {
 				System.out.println("Pair with given sum " + sum + " is (" + arr[i] + ", " + temp + ")");
+				System.out.println("Pair with given sum index is " + sum + " is (" + i + ", " + s.indexOf(temp) + ")");
 			}
 			s.add(arr[i]);
 		}

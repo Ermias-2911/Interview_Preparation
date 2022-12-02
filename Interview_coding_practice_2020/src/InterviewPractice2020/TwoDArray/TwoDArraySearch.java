@@ -1,5 +1,7 @@
 package InterviewPractice2020.TwoDArray;
 
+import java.util.Arrays;
+
 public class TwoDArraySearch {
 	private static void search(int[][] mat, int n, int x) {
 

@@ -1,6 +1,7 @@
 package InterviewPractice2020.MapMuniplation;
 
 import java.util.*;
+import java.util.stream.Collectors;
 
 public class MapMuniplation {
 
@@ -80,21 +81,30 @@ Arrays.asList(334,4);
 
 		System.out.println(" ");
 //
-//		// Sorting map by value ascending order only with LinkedHashmap work
-//		map.entrySet().stream()
-//				.sorted(Map.Entry.comparingByValue())
-//				.forEachOrdered(x -> map2.put(x.getKey(), x.getValue()));
-//		System.out.println("Sorted Map by value ascending order: " + map2);
+		// Sorting map by value ascending order only with LinkedHashmap work
+		map.entrySet().stream()
+				.sorted(Map.Entry.comparingByValue())
+				.forEachOrdered(x -> map2.put(x.getKey(), x.getValue()));
+		System.out.println("Sorted Map by value ascending order: " + map2);
 
 		System.out.println(" ");
 
 		// Sorting map by value descending order only with LinkedHashmap work
-		map.entrySet().stream()
-				.sorted(Map.Entry.comparingByValue(Comparator.reverseOrder()))
-				.forEachOrdered(x -> map2.put(x.getKey(), x.getValue()));
-		System.out.println("Sorted Map by vlaue decending order : " + map2);
+		Map<String , Integer> m = map.entrySet().stream()
+				.sorted(Map.Entry.comparingByValue())
+				.collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue, (a, b) -> a, LinkedHashMap::new));
 
-		System.out.println(" or without stream ");
+		System.out.println("Sorting map by Value: " + m);
+		System.out.println(" ");
+
+		// Sorting map by Value reverse order
+		Map<String , Integer> m2 = map.entrySet().stream()
+				.sorted(Map.Entry.comparingByValue(Comparator.reverseOrder()))
+				.collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue, (a, b) -> a, LinkedHashMap::new));
+
+		System.out.println("Sorting map by Value reverse order: " + m2);
+
+		System.out.println("or without stream ");
 
 
 		// Sorting map by value ascending order by List and Collections.sort()

@@ -14,7 +14,7 @@ public class FindDuplicateCharHashMap {
 
 			char ch = s.charAt(i);
 
-			// To skip white space
+			// To skip withe space
 			if (ch > 32) {
 
 				if (map.containsKey(ch)) {

@@ -10,7 +10,7 @@ public class AladinAndHisCarpet {
 
 // Aladdin and his Carpte problem
 // Determine the lowest index of the starting points form which Aladdin can start his
-// his journey and visit all of the places in the circular path inorder. If ther is no solution return -1.
+// his journey and visit all of the places in the circular path inorder. If there is no solution return -1.
 // magic = [2,4,5,2]  dist = [4,3,1,3]
 
 // Solution
