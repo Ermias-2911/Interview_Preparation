@@ -44,10 +44,10 @@ public class BackSpaceStringComparson {
 
 //		String s = "ab#c";
 //		String  t = "ad#c#";
-			String s = "a#c";
-			String t = "b";
-//		String s = "ab##";
-//		String t = 	"c#d#";
+//			String s = "a#c";
+//			String t = "b";
+		String s = "ab##";
+		String t = 	"c#d#";
 
 			System.out.println(" Result: " + backSpace(s, t));
 		}

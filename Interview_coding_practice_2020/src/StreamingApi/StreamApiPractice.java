@@ -382,6 +382,7 @@ public class StreamApiPractice {
         System.out.println("   ====>>> " + sortedMap3);
 
         // sorted(Map.Entry.comparingByValue())
+        // (e1, e2) -> e2, LinkedHashMap::new) use this all thetime at the end other wise order witll not save and map will not sorted
         System.out.println("\nSort budget map by value and convert it to LinkedHashMap");
         Map<String, Integer> sortedMap4 = budget
                 .entrySet()
@@ -393,6 +394,7 @@ public class StreamApiPractice {
         System.out.println("   ====>>> " + sortedMap4);
 
         // sorted(Collections.reverseOrder(Map.Entry.comparingByValue()))
+        // (e1, e2) -> e2, LinkedHashMap::new) use this all thetime at the end other wise order witll not save and map will not sorted
         System.out.println("\nSort budget map by value reverse order and convert it to LinkedHashMap ");
         Map<String, Integer> sortReverseOrder = budget
                 .entrySet()

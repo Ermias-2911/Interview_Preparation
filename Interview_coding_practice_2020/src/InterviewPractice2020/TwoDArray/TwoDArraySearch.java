@@ -9,9 +9,9 @@ public class TwoDArraySearch {
 		// element
 
 		while (i < n && j >= 0) {
-			System.out.println("n  " + mat[i][j]);
+
 			if (mat[i][j] == x) {
-				System.out.print("n Found at " + i + " " + j);
+				System.out.print(x + " Found at " + i + " " + j);
 				return;
 			}
 			if (mat[i][j] > x)
@@ -30,6 +30,12 @@ public class TwoDArraySearch {
 				{15, 25, 35, 45},
 				{27, 29, 37, 48},
 				{32, 33, 39, 50}};
+		// Print input matrix
+		System.out.println("Matrix Array");
+		for (int[] rows: mat)
+		{
+			System.out.println(Arrays.toString(rows));
+		}
 
 		search(mat, 4, 29);
 	}

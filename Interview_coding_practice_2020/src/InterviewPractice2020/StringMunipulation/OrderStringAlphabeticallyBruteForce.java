@@ -11,7 +11,7 @@ public class OrderStringAlphabeticallyBruteForce {
 		public static String stringSort(String ss) {
 
 			String[] s = ss.split(" ");
-
+			StringBuilder x = new StringBuilder(ss);
 			for (int j = 0; j < s.length; j++) {
 				for (int i = j + 1; i < s.length; i++) {
 

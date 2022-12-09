@@ -23,12 +23,14 @@ public class TreasureIslandProblem {
 //		}
 		int i = 0, j = 0;
 		List<List<Integer>> re = DFS(grid, i, j,  0);
+
+		// For test purpose
 		for (List<Integer> l : re) {
 			System.out.print(l);
 		}
 	}
 
-int count = 0;
+    int count = 0;
 	public  List<List<Integer>> DFS(char[][] grid, int row, int col, int level) {
 
 		if (col < 0 || col >= grid[0].length || row < 0 || row >= grid.length  || grid[row][col] == 'D') {
