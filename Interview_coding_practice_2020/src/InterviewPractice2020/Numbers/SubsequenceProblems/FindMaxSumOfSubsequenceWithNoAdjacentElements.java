@@ -1,4 +1,4 @@
-package InterviewPractice2020.Numbers;
+package InterviewPractice2020.Numbers.SubsequenceProblems;
 
 // Given an integer array, find the maximum sum of subsequence where the subsequence contains no element at adjacent positions.
 // The time complexity of the above solution is O(n) and requires O(n) extra space
@@ -9,7 +9,7 @@ package InterviewPractice2020.Numbers;
 
 import java.util.Arrays;
 
-public class FindTheMaxSumOfSubsequenceWithNoAdjacentElements {
+public class FindMaxSumOfSubsequenceWithNoAdjacentElements {
 
     public static int findMaxSumSubsequence(int[] nums) {
         // base case
@@ -25,12 +25,9 @@ public class FindTheMaxSumOfSubsequenceWithNoAdjacentElements {
         System.out.println(" Array nums: ===> " + Arrays.toString(nums));
         // store maximum sum until index `i-2`
         int prev_prev = nums[0];
-        System.out.println("  prev_prev = nums[0] is: ====>  " + prev_prev);
 
         // stores maximum sum until index `i-1`
         int prev = Integer.max(nums[0], nums[1]);
-        System.out.println(" \nprev = Integer.max(nums[0], nums[1]) : ===> " + prev);
-
 
         System.out.println(" <<<<<<<<<<<< Loop Start >>>>>>>>>>>>> ");
         // start from index 2

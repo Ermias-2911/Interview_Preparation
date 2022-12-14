@@ -7,8 +7,7 @@ public class FindingDuplicateUsingHashing {
         // we can also use a map instead of a visited array
         boolean visited[] = new boolean[nums.length + 1];
 
-        // mark each array element as visited and
-        // return it if seen before
+
         for (int value: nums)
         {
             // if the element is seen before
@@ -26,8 +25,7 @@ public class FindingDuplicateUsingHashing {
 
     public static void main (String[] args)
     {
-        // input array contains `n` numbers between 1 and `n-1`
-        // with one duplicate, where `n` is the array's length
+
         int[] nums = { 1, 2, 3, 4, 4 };
 
         System.out.println("The duplicate element is " + findDuplicate(nums));

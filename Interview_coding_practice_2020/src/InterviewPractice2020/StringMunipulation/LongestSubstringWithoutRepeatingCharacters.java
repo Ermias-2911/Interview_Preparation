@@ -1,8 +1,5 @@
 package InterviewPractice2020.StringMunipulation;
-import java.util.HashSet;
-import java.util.LinkedHashMap;
-import java.util.LinkedList;
-import java.util.Set;
+import java.util.*;
 
 // Author Ermias Haile
 // LeetCode Question
@@ -24,20 +21,25 @@ import java.util.Set;
 public class LongestSubstringWithoutRepeatingCharacters {
 
 		public static int lengthOfLongestSubstring(String str) {
-			Set<Character> set = new HashSet<>();
-			int leftIndex = 0;
-			int rightIndex = 0;
+			Set<Character> set = new LinkedHashSet<>();
+			int second_slide = 0;
+			int first_slide = 0;
 			int max = 0;
 
-			while (rightIndex < str.length()) {
+			while (first_slide <= str.length()-1) {
 
-				if(!set.contains(str.charAt(rightIndex))){
-					set.add(str.charAt(rightIndex));
+				if(set.add(str.charAt(first_slide))){
+
+					System.out.println("Added char: ==> " + str.charAt(first_slide));
 					max = Math.max(max, set.size());
-					rightIndex++;
+					first_slide++;
 				}else{
-					set.remove(str.charAt(leftIndex));
-					leftIndex++;
+					System.out.println(" ");
+					 set.remove(str.charAt(second_slide));
+
+					System.out.println("Removed char: ==> " + str.charAt(second_slide));
+					System.out.println(" ");
+					second_slide++;
 				}
 			}
 			return max;
@@ -45,6 +47,10 @@ public class LongestSubstringWithoutRepeatingCharacters {
 		public static void main(String[] args) {
 
 			String s = "abcabcbb";
-			System.out.println(" Result: " + lengthOfLongestSubstring(s));
+			// Expected 3
+			String ss = "pwwkew";
+			// Expected 2
+			String sss = "au";
+			System.out.println(" The longest substring without repeating character is: ===> " + lengthOfLongestSubstring(ss));
 		}
 	}

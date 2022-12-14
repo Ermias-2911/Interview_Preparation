@@ -1,30 +1,39 @@
 package InterviewPractice2020;
-class test {
-    /// Function to print duplicates
-    static int findMaxSumWithNoAdjucent(int arr[]) {
-        int maxOne = arr[0];
-        int maxTwo = 0;
 
-        int avoidOverFlow = (arr.length)/2 == 0  ? (arr.length -1 ) : (arr.length -2);
+import java.util.Arrays;
+import java.util.Stack;
 
-        for (int i = 0; i <= avoidOverFlow; i+=2) {
-
-            if( i != avoidOverFlow){
-                maxOne += arr[i+2];
+// Find the contigous subarray with an array which has the largest product.
+public class test {
+    public static boolean isValid(String s) {
+        char[] chars = s.toCharArray();
+        Stack<Character> stack = new Stack<>();
+        for (char element : chars) {
+            if (element == '(' || element == '[' || element == '{') {
+                stack.push(element);
+                continue;
+            } else if (stack.empty()) {
+                return false;
             }
-            if (i == avoidOverFlow && ( arr.length % 2 != 0 )){
-               break;
-            }else{
-                maxTwo += arr[i +1];
+            char top = stack.pop();
+            if (top == '(' && element != ')') {
+                return false;
+            } else if (top == '[' && element != ']') {
+                return false;
+            } else if (top == '{' && element != '}') {
+                return false;
             }
         }
-        return Math.max(maxTwo, maxOne);
+        return stack.empty();
     }
-        // Driver program
-        public static void main (String[]args){
-            int arr[] = {1, 2, 9, 4, 5, 0, 4, 11, 6};
-            int result = findMaxSumWithNoAdjucent(arr);
-            System.out.println(" Result of max sume is: " + result);
 
-        }
+    public static void main(String[] args) {
+        String st1 = "{{[{]}}}";
+        char[] a = {'[','{',')',']','(',')'};
+        Arrays.sort(a);
+        System.out.println(" a: " + Arrays.toString(a));
+        String st2 = "([{()}])";
+        String st3 = "{{[{]}}}";
+        System.out.println(" String Input " + st2 + " is: ===> " + isValid(st2));
+    }
 }

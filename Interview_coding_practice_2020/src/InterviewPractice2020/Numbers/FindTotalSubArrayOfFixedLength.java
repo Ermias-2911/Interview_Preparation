@@ -13,15 +13,12 @@ public class FindTotalSubArrayOfFixedLength {
 
         System.out.println("lis: " + sub.toString());
         int result = 0;
-        long startTime = System.nanoTime();
         for (int j = 0; j < request.size(); j++) {
             result += findSubLength(sub, request.get(j));
+            System.out.println(" sum result: " + result);
         }
-        long endTime = System.nanoTime();
-        long resu = endTime - startTime;
-        System.out.println("re: " + result + " execution time: " + resu);
 
-
+        System.out.println("Result is: ====>  " + result);
     }
 
     public static int findSubLength(List<Integer> lis, int sub) {

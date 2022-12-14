@@ -12,11 +12,11 @@ static int countConnectedOnce;
 			for (int j = 0; j < grid[0].length; j++){
 				if(grid[i][j] == 1){
 				// Variable result used to just count current connected once
-				int result =    dfsMark(grid, i, j);
+				int result =  dfsMark(grid, i, j);
 
 					System.out.println("There are: " + result + " Current connected once ");
 					// Used to just reset counter for current connected once
-//					countConnectedOnce = 0;
+					countConnectedOnce = 0;
 					count++;
 				}
 			}

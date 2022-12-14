@@ -26,19 +26,14 @@ public class ValidParentheses {
 
 			if (ch == '{' || ch == '[' || ch == '(') {
 				st.push(ch);
-			} else {
-				if (!st.isEmpty()) {
+			} else if (!st.isEmpty()) {
 					char match = st.pop();
-					if (match == '{' && ch == '}')
-						continue;
-					else if (match == '[' && ch == ']')
-						continue;
-					else if (match == '(' && ch == ')')
-						continue;
-					else {
+					if (match == '{' && ch != '}')
 						return false;
-					}
-				}
+					else if (match == '[' && ch != ']')
+						return false;
+					else if (match == '(' && ch != ')')
+						return false;
 			}
 		}
 		if (!st.isEmpty()) {
@@ -48,8 +43,10 @@ public class ValidParentheses {
 	}
 
 	public static void main(String[] args) {
-		String valid = "{{[{]}}}";
-		System.out.println(" Result: " + isValid(valid));
+		String st1 = "{{[{]}}}";
+		String st2 = "([{()}])";
+		String st3 = "{{[{]}}}";
+		System.out.println(" String Input " + st2 + " is: ===> " + isValid(st2));
 	}
 }
 

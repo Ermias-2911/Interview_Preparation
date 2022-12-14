@@ -42,7 +42,6 @@ public class FindLongestPalindrome {
             end++;
         }
         return s.substring(begin + 1, end);
-
     }
 
     public static void main(String[] args) {

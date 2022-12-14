@@ -18,7 +18,6 @@ public class BackSpaceStringComparson {
 					} else if (sResult.length() != 0 && s.charAt(i) == '#') {
 						sResult.deleteCharAt(sResult.length() - 1);
 					}
-
 				}
 
 				if (i < t.length()) {

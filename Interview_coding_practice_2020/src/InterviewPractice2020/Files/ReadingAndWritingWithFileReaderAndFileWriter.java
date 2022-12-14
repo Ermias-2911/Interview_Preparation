@@ -1,7 +1,7 @@
 package InterviewPractice2020.Files;
 // https://stackabuse.com/reading-and-writing-files-in-java/
 import java.io.*;
-// Reads character by character
+// Reads in one character at a time, without any buffering.
 public class ReadingAndWritingWithFileReaderAndFileWriter {
 	public static void main(String args[]) {
 

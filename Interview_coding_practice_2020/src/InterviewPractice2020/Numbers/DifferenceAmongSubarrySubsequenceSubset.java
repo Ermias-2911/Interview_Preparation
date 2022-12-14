@@ -42,6 +42,7 @@ public class DifferenceAmongSubarrySubsequenceSubset {
         }
     }
 
+    // Subsequence
     // A subsequence is a sequence that can be derived from another sequence by deleting some elements without changing the
     // order of the remaining elements. {nums, B, D} is a subsequence of sequence {nums, B, C, D, E} obtained after removing {C} and {E}.
     // {nums, C, E} is a subsequence of {nums, B, C, D, E}, but not a substring, and {nums, B, C} is both a subarray and a subsequence.

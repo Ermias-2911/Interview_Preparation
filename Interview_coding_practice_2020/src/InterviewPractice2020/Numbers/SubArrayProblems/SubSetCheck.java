@@ -1,4 +1,4 @@
-package InterviewPractice2020.Numbers;
+package InterviewPractice2020.Numbers.SubArrayProblems;
 import java.util.Arrays;
 
 public class SubSetCheck {

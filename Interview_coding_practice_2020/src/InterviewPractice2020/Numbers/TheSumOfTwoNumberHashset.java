@@ -1,8 +1,7 @@
 package InterviewPractice2020.Numbers;
-
-import java.util.ArrayList;
 import java.util.HashSet;
-import java.util.List;
+
+// Find the sum of two numbers
 
 public class TheSumOfTwoNumberHashset {
 

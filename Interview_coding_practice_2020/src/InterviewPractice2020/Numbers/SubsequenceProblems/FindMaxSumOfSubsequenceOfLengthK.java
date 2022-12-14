@@ -1,10 +1,10 @@
-package InterviewPractice2020.Numbers;
+package InterviewPractice2020.Numbers.SubsequenceProblems;
 import java.util.*;
 
 
 // Find a subsequence of nums of length k that has the largest sum. A subsequence is an array that can be
 // derived from another array by deleting some or no elements without changing the order of the remaining elements.
-public class FindSubsequenceOfLengthKWithTheLargestSum {
+public class FindMaxSumOfSubsequenceOfLengthK {
 
     public static int[] maxSubsequence(int[] nums, int k) {
         int n = nums.length;
@@ -35,7 +35,7 @@ public class FindSubsequenceOfLengthKWithTheLargestSum {
 
         // Sort by Index
         // Arrays.sort(twoDArrayCopy, Comparator.comparingInt(a -> a[0]));
-        Arrays.sort(twoDArray, (a, b) -> a[0] - b[0]);
+        Arrays.sort(twoDArrayCopy, (a, b) -> a[0] - b[0]);
 
         System.out.println(" ");
         System.out.println(" <<<<<<  2d Array sorted by index (Arrays.sort(twoDArray, (a, b) -> a[0] - b[0]) ) or Arrays.sort(twoDArrayCopy, Comparator.comparingInt(a -> a[0]))  >>>>>");
@@ -59,7 +59,7 @@ public class FindSubsequenceOfLengthKWithTheLargestSum {
         int k = 7;
 
         int[] newA = maxSubsequence(arr5 , k);
-        System.out.println(" A subsequence of nums of length k that has a largest sume  is: ====> " +  Arrays.toString(newA));
+        System.out.println(" A subsequence of nums of length K that has a largest sum  is: ====> " +  Arrays.toString(newA));
     }
 }
 
