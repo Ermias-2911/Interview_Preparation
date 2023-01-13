@@ -13,7 +13,6 @@ public class NumberPalindrome {
 		int reverseNumber = 0;
 		int copyNum = num;
 
-
 		while (copyNum > 0) {
 			int getOneDigit = copyNum % 10;
 			reverseNumber = reverseNumber * 10 + getOneDigit;

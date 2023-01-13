@@ -36,10 +36,7 @@ public class ValidParentheses {
 						return false;
 			}
 		}
-		if (!st.isEmpty()) {
-			return false;
-		}
-		return true;
+		return st.isEmpty();
 	}
 
 	public static void main(String[] args) {

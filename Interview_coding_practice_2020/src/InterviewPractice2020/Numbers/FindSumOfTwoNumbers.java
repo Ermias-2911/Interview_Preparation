@@ -11,7 +11,6 @@ public class FindSumOfTwoNumbers {
 		for(int i =0; i < num.length; i++){
 			int sum = target -	num[i];
 			if(map.containsKey(sum)){
-
 				return  new int[] { map.get(sum), i};
 			}else{
 				map.put(num[i], i);

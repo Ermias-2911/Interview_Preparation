@@ -17,7 +17,6 @@ import java.util.Arrays;
 
 public class MergeTwoSortedArrays {
 
-
     public static void merge(int[] arr1, int[] arr2)
     {
 
@@ -34,12 +33,10 @@ public class MergeTwoSortedArrays {
                 // Fisrst value of arr2
                 int first = arr2[0];
 
-
                 int j;
                 for (j = 1; j < arr2.length && arr2[j] < first; j++) {
                     arr2[j - 1] = arr2[j];
                 }
-
                 arr2[j - 1] = first;
             }
         }

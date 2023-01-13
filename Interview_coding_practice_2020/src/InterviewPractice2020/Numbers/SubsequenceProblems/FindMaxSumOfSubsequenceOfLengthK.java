@@ -26,7 +26,6 @@ public class FindMaxSumOfSubsequenceOfLengthK {
         // Copy twoDArrayCopy Array from twoDArray 2D Array K size
         int[][] twoDArrayCopy = Arrays.copyOf(twoDArray, k);
 
-
         System.out.println(" <<<<<<  Copy of 2d Array with K size  >>>>>");
         System.out.println(" ");
         for(int[] a : twoDArrayCopy){

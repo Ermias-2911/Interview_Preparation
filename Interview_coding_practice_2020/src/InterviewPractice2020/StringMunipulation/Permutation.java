@@ -2,7 +2,6 @@ package InterviewPractice2020.StringMunipulation;
 
 public class Permutation {
 
-
 	// Utility function to swap two characters in a character array
 	private static String swap(String st, int i, int j) {
 		char[]   ch = st.toCharArray();

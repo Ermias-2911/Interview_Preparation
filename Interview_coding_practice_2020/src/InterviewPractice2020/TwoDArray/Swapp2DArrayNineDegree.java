@@ -9,7 +9,7 @@ import org.w3c.dom.Node;
 import java.util.Arrays;
 
 public class Swapp2DArrayNineDegree {
-Node jnext;
+
 	public static void RotateNineDegree(int[][] grid) {
 
 		// Swap Diagonally First (We assign j = i because to increment both row and column index left and right equally)

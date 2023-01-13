@@ -36,7 +36,6 @@ public class LongestSubstringWithoutRepeatingCharacters {
 				}else{
 					System.out.println(" ");
 					 set.remove(str.charAt(second_slide));
-
 					System.out.println("Removed char: ==> " + str.charAt(second_slide));
 					System.out.println(" ");
 					second_slide++;

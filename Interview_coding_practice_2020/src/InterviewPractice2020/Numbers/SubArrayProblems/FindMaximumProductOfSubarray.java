@@ -1,6 +1,6 @@
 package InterviewPractice2020.Numbers.SubArrayProblems;
 
-// Find the contigous subarray with an array which has the largest product.
+// Find the contiguous subarray with an array which has the largest product.
 public class FindMaximumProductOfSubarray {
 
 public  static int maxProduct(int[] arr){

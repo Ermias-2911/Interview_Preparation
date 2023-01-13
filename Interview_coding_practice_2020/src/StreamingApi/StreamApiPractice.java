@@ -1,5 +1,6 @@
 package StreamingApi;
 import java.util.*;
+import java.util.function.Function;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
@@ -340,6 +341,14 @@ public class StreamApiPractice {
         System.out.println("   **********  Solution using groupBy() ********* ");
         groupByState.forEach((k,v)-> System.out.println("   State ====>>> " + k + "  |  Employee ====>>> " + v));
 
+        // Count frequency of each character
+        String inputt =  "Basanta";
+        System.out.println("\nCount frequency of each character");
+        Map<String, Long> frequency = Arrays.stream(inputt.split(""))
+                .collect(Collectors.groupingBy(
+                        Function.identity(), Collectors.counting()
+                ));
+        System.out.println("   **********  Solution using groupBy() ********* ");
 
         // ########################################## Stream Problems On Map Collection  ################################
         System.out.println(" ");
